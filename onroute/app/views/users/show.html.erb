@@ -1,0 +1,18 @@
+<h2>Show User</h2>
+<p id="notice"><%= notice %></p>
+
+<div class="newform">
+  <b>Email:</b>
+  <%= @user.email %><br /><br />
+  <b>Name:</b>
+  <%= @user.name %><br /><br />
+  <b>Surname:</b>
+  <%= @user.surname %><br /><br />
+  <b>Gender:</b>
+  <%= @user.gender %><br /><br />
+  <b>Country:</b>
+  <%= @user.country %><br /><br />
+</div>
+
+<p id="back_edit"><%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %></p>

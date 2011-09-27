@@ -1,0 +1,46 @@
+<%if @routes.empty? == false %>
+<h2>Listing routes</h2>
+<table id="listing">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Country</th>
+    <th>Province</th>
+    <th>City</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @routes.each do |route| %>
+  <tr id="row">
+    <th><%= route.name %></th>
+    <td><%= route.description %></td>
+    <td><%= route.country %></td>
+    <td><%= route.province %></td>
+    <td><%= route.city %></td>
+    <td><%= route.date %></td>
+<% if current_user.email == "root@onroute.com" %>
+    <td><%= link_to 'Show', route %></td>
+    <td><%= link_to 'Edit', edit_route_path(route) %></td>
+    <td><%= link_to 'Destroy', route, :confirm => 'Are you sure?', :method => :delete %></td>
+<% else %>
+<td><%= link_to 'Show', route %></td>
+<% if Participant.where(:user_id => current_user.id, :route_id => route.id).empty? == false %>
+<td style="color:green; font-weight:bold">Already joined</td>
+<td></td>
+<% else%>
+<td></td>
+<td></td>
+<% end%>
+<%end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<% else %>
+	<p class="field_without_errors"> Currently There isn't any route created. Create one  <%= link_to "Here", :action => 'new'  %></p>
+<% end %>
+
+<p id="back"><%= link_to 'Back', :controller => "index", :action => "index" %></p>

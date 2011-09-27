@@ -1,0 +1,18 @@
+<h2>Log in</h2>
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+<%= form_tag sessions_path do %>
+<div class="newform">
+  <p>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, params[:email] %>
+  </p>
+  <p>
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+  </p>
+  <p class="button"><%= submit_tag "Log in" %></p>
+</div>
+<% end %>
+<p id="back"><%= link_to 'Back', :controller => "index", :action => "index" %></p>

@@ -1,0 +1,38 @@
+<h2>Show Route</h2>
+<p id="notice"><%= notice %></p>
+
+<div class="newform">
+  <b>Name:</b>
+<%= @route.name %><br /><br />
+  <b>Description:</b>
+<%= @route.description %><br /><br />
+  <b>Country:</b>
+<%= @route.country %><br /><br />
+  <b>Province:</b>
+<%= @route.province %><br /><br />
+  <b>City:</b>
+<%= @route.city %><br /><br />
+  <b>Date:</b>
+<%= @route.date %>
+</div>
+<% if Participant.where(:user_id => current_user.id, :route_id => @route.id).empty? == false %>
+<div id="quit"><%= link_to "Unsubscribe!", :controller => "routes", :action => "unsubscribe", :id => @route.id %></div>
+<% else%>
+<div id="subscribe"><%= link_to "Join!", :controller => "routes", :action => "subscribe", :id => @route.id %></div>
+<% end %>
+<h2>Participants</h2>
+<div id="participants">
+<% n = 0 %>
+<% if @route.participants.empty? == true %>
+	<b>There isn't any participant yet</b>
+<% else %>
+	<% @route.participants.each do |participant| %>
+		<% n = n + 1 %>
+  		<b> <%= n %>.- </b>
+		<%= User.find(participant.user_id).name %><br /><br />
+	<% end %>
+<% end %>
+</div>
+
+<p id="back_edit"><%= link_to 'Edit', edit_route_path(@route) %> |
+<%= link_to 'Back', routes_path %></p>

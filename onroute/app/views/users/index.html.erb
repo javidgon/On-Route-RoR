@@ -1,0 +1,36 @@
+<h2>Listing users</h2>
+
+<table id="listing">
+  <tr>
+    <th>Email</th>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Gender</th>
+    <th>Country</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @users.each do |user| %>
+  <tr id="row">
+    <th><%= user.email %></th>
+    <td><%= user.name %></td>
+    <td><%= user.surname %></td>
+    <td><%= user.gender %></td>
+    <td><%= user.country %></td>
+<% if current_user.email == "root@onroute.com" %>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+<% else %>
+	<td><%= link_to 'Show', user %></td>
+    <td></td>
+    <td></td>
+<% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<p id="back"><%= link_to 'Back', :controller => "index", :action => "index" %></p>

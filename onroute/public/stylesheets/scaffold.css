@@ -1,0 +1,332 @@
+/* HOJA DE ESTILO DE ONROUTE V.1.0 */
+
+
+body { background-color: #CAD9B1; color: #8FB2A0; margin:1em;}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+div.newform{
+	font-size:1.5em;
+	color:white;
+  background-color:#8FB2A0;	
+  padding:1em;
+  width:25em;
+  border: 1px solid white;
+}
+
+h2{
+	color:#648991;
+}
+h3{
+	color:green;
+}
+#notice {
+  color: green;
+}
+
+/* Mensajes de error generales.*/
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+.field_with_errors_logged {
+	font-size:2em;
+  padding: 1.5em;
+margin-top:1em;
+	color:red;
+  background-color: white;
+border: 1px solid red;
+
+}
+.field_with_errors_logged a{
+	color:green;
+	text-decoration:none;
+}
+.field_with_errors_logged a:hover{
+	background-color:white;
+	text-decoration:underline;
+}
+.field_without_errors {
+	font-size:2em;
+  padding: 1.5em;
+margin-top:1em;
+	color:green;
+  background-color: white;
+border: 1px solid green;
+line-height:1.5em;
+
+}
+.field_without_errors a{
+	color:red;
+	text-decoration:none;
+	
+}
+.field_without_errors a:hover{
+	color:red;
+	background-color:white;
+	text-decoration:underline;
+	
+}
+
+/* Errores en la creación de rutas o usuarios. */
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+color: red;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* Cabecera de la página */
+
+#logo{
+	background-color:#648991;
+	color:white;
+	padding:1.5em;
+	border: 2px solid #8FB2A0;
+}
+
+/* Botones predeterminados*/
+
+#button{
+	font-size:1.5em;
+	color:white;
+	padding:1em;
+	width:10em;
+	background-color:#8FB2A0;
+	border:1px solid #648991;
+}
+#button a{
+	color:white;
+	text-decoration:none;
+}
+
+#button a:hover{
+	background-color:#648991;
+	text-decoration:underline;
+}
+
+#button:hover{
+	background-color:#648991;
+}
+
+/* Imágenes*/
+
+img{
+	float:right;
+	position:absolute;
+	border:1px solid white;
+	top:9.7em;
+	left:25em;
+}
+#user{
+	font-size:1.5em;	
+	background-color:#8FB2A0;
+	color:white;
+	border: 1px white solid;
+	padding:1em;
+}
+/* Listados */
+
+#listing{
+	font-size:1.5em;
+	color:white;
+	padding:1em;
+	background-color:#8FB2A0;
+	border: 1px white solid;
+}
+#listing tr{
+	padding:2em;
+	line-height:2em;
+}
+#listing th{
+	padding-right:3em;
+}
+#row{
+	margin:4em;
+		color:#FFF8C8;
+}
+
+/* Cuadros de texto de la página principal. */
+#new{
+	font-size:1.5em;
+	background-color:#CF5B6F;
+	color:white;
+	padding:1em;
+	max-width:10em;
+	border:1px solid white;
+	line-height:1.5em;
+
+}
+
+#new a{
+	color:white;
+	background-color:#CF5B6F;
+		text-decoration:none;
+}
+
+#new a:hover{
+	text-decoration:underline;
+}
+
+/* Botón Back */
+
+#back{
+	font-size:1.5em;
+	background-color:#FFA8B8;
+		border:1px solid white;
+		width:3em;
+		padding:1em;	
+}
+
+#back a{
+	color:white;
+	text-decoration:none;
+}
+#back a:hover{
+	background-color:#FFA8B8;
+		text-decoration:underline;
+}
+/* Elemento superior derecho LOG OUT */
+
+#user_nav{
+	float:right;
+}
+
+#user_nav a{
+	color:white;
+	font-size:1.5em;
+	text-decoration:none;
+}
+
+#user_nav a:hover{
+	text-decoration:underline;
+	background-color:#648991;
+}
+/* Botón JOIN ------------------------------*/
+
+#subscribe{
+	font-size:1.5em;
+	font-weight:bold;
+	background-color:#F2931F;
+	color:white;
+	padding:1em;
+	border: 1px white solid;
+	margin-top:1em;
+	max-width:3.5em;
+}
+#subscribe a{
+	color:white;
+	text-decoration:none;
+	
+}
+#subscribe a:hover{
+	color:white;
+	text-decoration:underline;
+	background-color:#F2931F;
+	
+}
+
+/* Botón QUIT ------------------------------*/
+#quit{
+	color:red;
+	background-color:white;
+	padding:1em;
+	font-size:1.5em;
+	border: 1px red solid;
+	max-width:7em;
+	margin-top:1em;
+}
+#quit a{
+	color:red;
+	text-decoration:none;
+}
+#quit a:hover{
+	color:red;
+	text-decoration:underline;
+	background-color:white;
+}
+
+/* Botón Back y EDIT ----------------------------*/
+#back_edit{
+	font-size:1.5em;
+	background-color:#FFA8B8;
+	border:1px solid white;
+	width:6em;
+	padding:1em;	
+	}
+#back_edit a{
+	color:white;
+	text-decoration:none;
+	
+}
+#back_edit a:hover{
+	text-decoration:underline;
+		background-color:#FFA8B8;
+}
+
+/* --------------------------------------- */
+#footer{
+	/* Pié de la página*/
+	position:absolute;
+	bottom:0;
+	width:98%;
+	height:2em;
+	background-color:#F2931F;
+	margin-bottom:1em;
+	border:1px solid #AD6A17;
+	text-align:center;
+	color:white;
+}
+
+#participants{
+	/* Cuadro de participantes. */
+	background-color:#F2931F;
+	color:white;
+	width:15em;
+	padding:1em;
+	margin-top:1em;
+	font-size:1.3em;
+	border: 1px solid white;
+}
+
+
